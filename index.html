@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .first{
+            background-color: blueviolet;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fist{
+            background-color:silver;
+            border-radius: 40px;
+            width: 400px;
+            height: 500px;
+        }
+        .put{
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            padding-top:50px;
+            gap: 15px;
+
+        }
+        #in{
+            height:40px;
+            border-radius: 20px;
+            /* width: 50px; */
+            border:2px solid black;
+        }
+        #in2{
+            height:40px;
+            border-radius: 20px;
+            border:2px solid black;
+            /* width: 50px; */
+        }
+        #solution{
+            /* background-color: aqua; */
+            height:300px;
+            width: 300px;
+        }
+        .btn button{
+            width: 70px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            margin-top:6px;
+            justify-content: center;
+            align-items: center;
+            font-size:40px;
+        }
+        .con{
+            display: flex;
+            width:400px;
+            height:350px;
+            gap:5px;
+            justify-content: center;
+            /* background-color:red; */
+            align-items: center;
+            border-radius: 0 0 40px 40px;
+            
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="fist">
+        <div class="put">
+        <input id="in" type="text">
+        <input id="in2" type="text">
+    </div>
+            <div class="con">
+              <div class="btn">
+                <button onclick="plus()">+</button>
+                <button onclick="minus()">-</button>
+                <button onclick="multiply()">*</button>
+                <button onclick="divide()">/</button>
+            </div>
+            <button id="solution"></button>
+        </div>
+</div>
+    </div>
+   
+    
+</body>
+</html>
+<script>
+    let myAns1 = document.getElementById('in')
+    let myAns2 = document.getElementById('in2')
+    let mySol = document.getElementById('solution')
+    function plus() {
+        let myAns= Number(myAns1.value) + Number (myAns2.value)
+        mySol.innerHTML= myAns
+        in1.value=''
+        in2.value=''
+
+    }
+    function minus() {
+        let myAns= Number(myAns1.value) - Number (myAns2.value)
+        mySol.innerHTML= myAns
+        in1.value=''
+        in2.value=''
+
+    }
+    function multiply() {
+        let myAns= Number(myAns1.value) * Number (myAns2.value)
+        mySol.innerHTML= myAns
+        in1.value=''
+        in2.value=''
+
+    }
+    function divide() {
+        let myAns= Number(myAns1.value) / Number (myAns2.value)
+        mySol.innerHTML= myAns
+        in1.value=''
+        in2.value=''
+
+    }
+    
+
+</script>
